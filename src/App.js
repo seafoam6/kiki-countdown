@@ -23,8 +23,16 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        Kiki Countdown ❤️ ❤️ ❤️ ❤️ ❤️
-        <Countdown date={"2023-02-04T00:44:00"} renderer={renderer} />
+        <span>
+          ❤️ MICHIGAN ❤️
+          <Countdown date={"2023-02-04T00:44:00"} renderer={renderer} />
+          ❤️
+        </span>
+        <span>
+          ❤️ VEGAS ❤️
+          <Countdown date={"2023-03-02T17:34:00"} renderer={renderer} />
+          ❤️
+        </span>
       </header>
     </div>
   );
