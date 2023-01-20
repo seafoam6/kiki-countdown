@@ -1,7 +1,6 @@
 {
   "name": "kiki-countdown",
   "version": "0.1.0",
-  "homepage": "https://seafoam6.github.io/kiki-countdown",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
@@ -19,7 +18,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-  "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
