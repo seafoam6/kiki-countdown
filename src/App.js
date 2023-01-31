@@ -25,12 +25,12 @@ function App() {
       <header className="App-header">
         <span>
           ❤️ MICHIGAN ❤️
-          <Countdown date={"2023-02-04T00:44:00"} renderer={renderer} />
+          <Countdown date={"2023-02-04T00:44:00-05:00"} renderer={renderer} />
           ❤️
         </span>
         <span>
           ❤️ VEGAS ❤️
-          <Countdown date={"2023-03-02T17:34:00"} renderer={renderer} />
+          <Countdown date={"2023-03-02T17:34:00-05:00"} renderer={renderer} />
           ❤️
         </span>
       </header>
