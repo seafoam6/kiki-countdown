@@ -46,7 +46,11 @@ function App() {
         <span>
           ❤️ VEGAS ❤️
           <Countdown date={"2023-03-02T17:34:00-05:00"} renderer={renderer} />
-          ❤️
+          ❤️ <br />
+          <Countdown
+            date={"2023-03-02T17:34:00-05:00"}
+            renderer={minuteRender}
+          />
         </span>
       </header>
     </div>
