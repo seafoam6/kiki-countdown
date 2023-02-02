@@ -1,7 +1,7 @@
 import Countdown from "react-countdown";
 import "./App.css";
 
-const Completionist = () => <span>Times up!</span>;
+const Completionist = () => <span>🛫</span>;
 
 const renderer = ({ hours, minutes, seconds, completed, days }) => {
   console.log({ hours, minutes, seconds, completed });
@@ -19,6 +19,17 @@ const renderer = ({ hours, minutes, seconds, completed, days }) => {
   }
 };
 
+const minuteRender = ({ hours, minutes, seconds, completed, days }) => {
+  const total = hours * 60 + minutes + days * 24 * 60;
+  if (completed) {
+    // Render a completed state
+    return <Completionist />;
+  } else {
+    // Render a countdown
+    return <span>{total} Minutes left</span>;
+  }
+};
+
 function App() {
   return (
     <div className="App">
@@ -26,7 +37,11 @@ function App() {
         <span>
           ❤️ MICHIGAN ❤️
           <Countdown date={"2023-02-04T00:44:00-05:00"} renderer={renderer} />
-          ❤️
+          ❤️ <br />
+          <Countdown
+            date={"2023-02-04T00:44:00-05:00"}
+            renderer={minuteRender}
+          />
         </span>
         <span>
           ❤️ VEGAS ❤️
