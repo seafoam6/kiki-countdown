@@ -4,17 +4,19 @@ import "./App.css";
 const Completionist = () => <span>🛫</span>;
 
 const renderer = ({ hours, minutes, seconds, completed, days }) => {
-  console.log({ hours, minutes, seconds, completed });
+  const totalMinutes = hours * 60 + minutes + days * 24 * 60;
   if (completed) {
     // Render a completed state
     return <Completionist />;
   } else {
     // Render a countdown
-    return (
+    return totalMinutes > 60 ? (
       <span>
         {days}:{String(hours).padStart(2, 0)}:
         {String(minutes + 1).padStart(2, 0)}
       </span>
+    ) : (
+      <span>{totalMinutes} Minutes left</span>
     );
   }
 };
@@ -38,10 +40,7 @@ function App() {
           ❤️ MI to CA ❤️
           <Countdown date={"2023-03-02T17:34:00-05:00"} renderer={renderer} />
           ❤️ <br />
-          <Countdown
-            date={"2023-04-11T23:58:00-05:00"}
-            renderer={minuteRender}
-          />
+          <Countdown date={"2023-04-11T23:58:00-05:00"} renderer={renderer} />
         </span>
         <span>
           ❤️ VEGAS ❤️
