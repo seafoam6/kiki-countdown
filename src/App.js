@@ -35,11 +35,11 @@ function App() {
     <div className="App">
       <header className="App-header">
         <span>
-          ❤️ MICHIGAN ❤️
-          <Countdown date={"2023-02-04T00:44:00-05:00"} renderer={renderer} />
+          ❤️ MI to CA ❤️
+          <Countdown date={"2023-03-02T17:34:00-05:00"} renderer={renderer} />
           ❤️ <br />
           <Countdown
-            date={"2023-02-04T00:44:00-05:00"}
+            date={"2023-04-11T23:58:00-05:00"}
             renderer={minuteRender}
           />
         </span>
@@ -49,6 +49,15 @@ function App() {
           ❤️ <br />
           <Countdown
             date={"2023-03-02T17:34:00-05:00"}
+            renderer={minuteRender}
+          />
+        </span>
+        <span>
+          ❤️ MICHIGAN ❤️
+          <Countdown date={"2023-02-04T00:44:00-05:00"} renderer={renderer} />
+          ❤️ <br />
+          <Countdown
+            date={"2023-02-04T00:44:00-05:00"}
             renderer={minuteRender}
           />
         </span>
